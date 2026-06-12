@@ -1,11 +1,12 @@
 <?php
-    include_once $_SERVER['DOCUMENT_ROOT'] . "/LOJADOCE/DAL/conexao.php";
-    
-    $sql = "Select * from cliente;";
-    $con = DAL\Conexao::conectar();
-    $registros = $con->query($sql);
-    $con = DAL\Conexao::desconectar();
 
+    include_once $_SERVER['DOCUMENT_ROOT'] . "/LOJADOCE/DAL/cliente.php";
+    include_once $_SERVER['DOCUMENT_ROOT'] . "/LOJADOCE/MODEL/cliente.php";
+
+    use DAL\cliente;
+
+    $dalCliente = new Cliente();
+    $listacliente = $dalCliente->Select();
 ?>
 
 <!DOCTYPE html>
@@ -24,19 +25,19 @@
 </head>
 <body>
     <h1>Lista de Clientes</h1>
-    <table class = "striped">
+    <table class = "striped responsive-table">
         <tr>
             <th>ID</th>
             <th>Nome</th>
             <th>CPF</th>
             <th>Numero/Telefone</th>
         </tr>
-        <?php foreach ($registros as $cliente) { ?>
+        <?php foreach ($listacliente as $cliente) { ?>
             <tr>
-                <td><?php echo $cliente['id']; ?></td>
-                <td><?php echo $cliente['nome']; ?></td>
-                <td><?php echo $cliente['cpf']; ?></td>
-                <td><?php echo $cliente['telefone']; ?></td>
+                <td><?php echo $cliente->getIdcliente(); ?></td>
+                <td><?php echo $cliente->getNome(); ?></td>
+                <td><?php echo $cliente->getCpf(); ?></td>
+                <td><?php echo $cliente->getNumero(); ?></td>
             </tr>
         <?php } ?>
     </table>

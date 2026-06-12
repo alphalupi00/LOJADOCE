@@ -1,10 +1,12 @@
 <?php
-    include_once $_SERVER['DOCUMENT_ROOT'] . "/LOJADOCE/DAL/conexao.php";
-    $sql = "Select * from fornecedor;";
-    $con = DAL\Conexao::conectar();
-    $registros = $con->query($sql);
-    $con = DAL\Conexao::desconectar();
 
+    include_once $_SERVER['DOCUMENT_ROOT'] . "/LOJADOCE/DAL/fornecedor.php";
+    include_once $_SERVER['DOCUMENT_ROOT'] . "/LOJADOCE/MODEL/fornecedor.php";
+
+    use DAL\fornecedor;
+
+    $dalFornecedor = new Fornecedor();
+    $listafornecedor = $dalFornecedor->Select();
 ?>
 
 <!DOCTYPE html>
@@ -23,19 +25,18 @@
 </head>
 <body>
     <h1>Lista de Fornecedores</h1>
-    <table class = "striped">
+    <table class = "striped responsive-table">
         <tr>
             <th>ID</th>
             <th>Descrição</th>
             <th>CNPJ</th>
 
         </tr>
-        <?php foreach ($registros as $fornecedor) { ?>
+        <?php foreach ($listafornecedor as $fornecedor) { ?>
             <tr>
-                <td><?php echo $fornecedor['idfornecedor']; ?></td>
-                <td><?php echo $fornecedor['descricao']; ?></td>
-                <td><?php echo $fornecedor['cnpj']; ?></td>
-
+                <td><?php echo $fornecedor->getIdfornecedor(); ?></td>
+                <td><?php echo $fornecedor->getDescricao(); ?></td>
+                <td><?php echo $fornecedor->getCnpj(); ?></td>
             </tr>
         <?php } ?>
     </table>

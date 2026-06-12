@@ -10,7 +10,7 @@
             $registros = $con->query($sql);
             $con = Conexao::desconectar();
 
-            $listaprodutos = [];
+            $listaproduto = [];
 
             foreach ($registros as $linha){
                 $produto = new \MODEL\produto();
@@ -21,10 +21,25 @@
                 $produto->setQtdminima($linha['qtdminima']);
                 $produto->setQtdmaxima($linha['qtdmaxima']);
 
-                $listaprodutos[]= $produto;
+                $listaproduto[]= $produto;
             }
 
-            return $listaprodutos;
+            return $listaproduto;
+        }
+
+        public function Insert(\MODEL\Produto $produto)
+        {
+            $sql = "INSERT INTO produto (descricao, preco, qtdestoque, qtdminima, qtdmaxima) 
+            VALUES ('{$produto->getDescricao()}', '{$produto->getPreco()}', '{$produto->getQtdestoque()}', '{$produto->getQtdminima()}', '{$produto->getQtdmaxima()}' );";
+
+            $con = Conexao::conectar();
+            $result = $con->query($sql); 
+            $con = Conexao::desconectar();
+
+            echo $result->errorCode();
+            
+            return $result;
+
         }
     }
 ?>

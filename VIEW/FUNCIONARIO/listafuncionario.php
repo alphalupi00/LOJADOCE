@@ -1,9 +1,12 @@
 <?php
-    include_once $_SERVER['DOCUMENT_ROOT'] . "/LOJADOCE/DAL/conexao.php";
-    $sql = "Select * from funcionario;";
-    $con = DAL\Conexao::conectar();
-    $registros = $con->query($sql);
-    $con = DAL\Conexao::desconectar();
+
+    include_once $_SERVER['DOCUMENT_ROOT'] . "/LOJADOCE/DAL/funcionario.php";
+    include_once $_SERVER['DOCUMENT_ROOT'] . "/LOJADOCE/MODEL/funcionario.php";
+
+    use DAL\funcionario;
+
+    $dalFuncionario = new Funcionario();
+    $listafuncionario = $dalFuncionario->Select();
 
 ?>
 
@@ -23,19 +26,19 @@
 </head>
 <body>
     <h1>Lista de Funcionários</h1>
-    <table class = "striped">
+    <table class="striped responsive-table">
         <tr>
             <th>ID</th>
             <th>Nome</th>
             <th>Telefone</th>
             <th>Email</th>
         </tr>
-        <?php foreach ($registros as $funcionario) { ?>
+        <?php foreach ($listafuncionario as $funcionario) { ?>
             <tr>
-                <td><?php echo $funcionario['idfuncionario']; ?></td>
-                <td><?php echo $funcionario['nome']; ?></td>
-                <td><?php echo $funcionario['numero']; ?></td>
-                <td><?php echo $funcionario['email']; ?></td>
+                <td><?php echo $funcionario->getIdfuncionario(); ?></td>
+                <td><?php echo $funcionario->getNome(); ?></td>
+                <td><?php echo $funcionario->getNumero(); ?></td>
+                <td><?php echo $funcionario->getEmail(); ?></td>
             </tr>
         <?php } ?>
     </table>

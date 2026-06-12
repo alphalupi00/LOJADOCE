@@ -7,23 +7,27 @@
         private ?int $qtdestoque;
         private ?int $qtdminima;
         private ?int $qtdmaxima;
+/////
 
         public function __construct() {
            
         }
+/////
         public function getIdProduto(){
             return $this->idproduto;
         }
         public function setIdProduto(int $idproduto){
             $this->idproduto = $idproduto;
         }
+/////
 
         public function getDescricao(){
             return $this->descricao;
         }
-        public function setDescricao(int $descricao){
+        public function setDescricao(string $descricao){
             $this->descricao = $descricao;
         }
+/////
 
         public function getPreco(){
             return $this->preco;
@@ -31,6 +35,7 @@
         public function setPreco(float $preco){
             $this->preco = $preco;
         }
+/////
 
         public function getQtdestoque(){
             return $this->qtdestoque;
@@ -38,6 +43,7 @@
         public function setQtdestoque(int $qtdestoque){
             $this->qtdestoque = $qtdestoque;
         }
+/////
 
 
         public function getQtdminima(){
@@ -46,7 +52,7 @@
         public function setQtdminima(int $qtdminima){
             $this->qtdminima = $qtdminima;
         }
-
+/////
         public function getQtdmaxima(){
             return $this->qtdmaxima;
         }

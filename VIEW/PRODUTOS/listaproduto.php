@@ -24,9 +24,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produtos</title>
 </head>
-<body>
+<body class="#a1887f  brown lighten-4">
     <h1>Lista de Produtos</h1>
-    <table class = "striped">
+        <a class="btn-floating btn-small waves-effect waves-light green">
+            <i class="material-icons"
+                onclick="javaScript:location.href='inserirproduto.php'">+</i>
+        </a>
+
+    <table class="striped responsive-table hover: orange lighten-2">
         <tr>
             <th>ID</th>
             <th>Descrição</th>
