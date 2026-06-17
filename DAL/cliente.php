@@ -24,5 +24,20 @@
 
             return $listacliente;
         }
+
+        public function Insert(\MODEL\Cliente $cliente)
+        {
+            $sql = "INSERT INTO cliente (nome, cpf, numero) 
+            VALUES ('{$cliente->getNome()}', '{$cliente->getCpf()}', '{$cliente->getNumero()}' );";
+
+            $con = Conexao::conectar();
+            $result = $con->query($sql); 
+            $con = Conexao::desconectar();
+
+            echo $result->errorCode();
+            
+            return $result;
+
+        }
     }
 ?>

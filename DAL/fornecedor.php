@@ -24,5 +24,20 @@
 
             return $listafornecedor;
         }
+
+        public function Insert(\MODEL\Fornecedor $fornecedor)
+        {
+            $sql = "INSERT INTO fornecedor (descricao, cnpj) 
+            VALUES ('{$fornecedor->getDescricao()}', '{$fornecedor->getCnpj()}' );";
+
+            $con = Conexao::conectar();
+            $result = $con->query($sql); 
+            $con = Conexao::desconectar();
+
+            echo $result->errorCode();
+            
+            return $result;
+
+        }
     }
 ?>

@@ -18,6 +18,9 @@
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- para usar icones na pagina -->
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
             
 
     <meta charset="UTF-8">
@@ -26,6 +29,7 @@
 </head>
 <body class="#a1887f  brown lighten-4">
     <h1>Lista de Produtos</h1>
+    <!-- botao salvar -->
         <a class="btn-floating btn-small waves-effect waves-light green">
             <i class="material-icons"
                 onclick="javaScript:location.href='inserirproduto.php'">+</i>

@@ -46,9 +46,10 @@
                     <label for="quantidadelabel">Quantidade maxima: </label>
                 </div>
 
+                <!-- botao enviar -->
                 <div class="row center col s8">
                     <button class="btn waves-effect waves-light" type="submit" name="action" >
-                    Enviar
+                    Salvar
                     </button>
                   
                     
