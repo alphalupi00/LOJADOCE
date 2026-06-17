@@ -1,3 +1,7 @@
+<?php
+    include_once $_SERVER['DOCUMENT_ROOT'] . "/LOJADOCE/VIEW/menu.php";
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -18,11 +22,6 @@
     <div class="container center">
         <h1>Bem Vindo a Loja Doce</h1>
         <br>
-        <!--caixinhas de opcoes-->
-        <a class="waves-effect waves-light btn-large" href="CLIENTE/listacliente.php">Clientes</a>
-        <a class="waves-effect waves-light btn-large" href="FUNCIONARIO/listafuncionario.php">Funcionários</a>
-        <a class="waves-effect waves-light btn-large" href="FORNECEDOR/listafornecedor.php">Fornecedores</a>
-        <a class="waves-effect waves-light btn-large" href="PRODUTOS/listaproduto.php">Produtos</a>
         <!--div pra separar a imagem-->
         <div>
             <img src="../IMAGENS/loja.png" width="800" alt="imagemloja" class="responsive-img">

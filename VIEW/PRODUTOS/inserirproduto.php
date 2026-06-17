@@ -1,3 +1,8 @@
+<?php
+
+    include_once $_SERVER['DOCUMENT_ROOT'] . "/LOJADOCE/VIEW/menu.php";
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
