@@ -28,17 +28,19 @@
 </head>
 <body class="#a1887f  brown lighten-4">
     <h1>Lista de Clientes</h1>
-        <!-- botao salvar -->
-    <a class="btn-floating btn-small waves-effect waves-light green">
-        <i class="material-icons"
-            onclick="javaScript:location.href='inserircliente.php'">+</i>
-    </a>
+
     <table class = "striped responsive-table hover: orange lighten-2">
         <tr>
             <th>ID</th>
             <th>Nome</th>
             <th>CPF</th>
             <th>Numero/Telefone</th>
+            <th>Cadastrar cliente
+                            <!-- botao salvar -->
+                <a class="btn-floating btn-small waves-effect waves-light green" style="margin-left: 10px;">
+                    <i class="material-icons" onclick="javaScript:location.href='inserircliente.php'">+</i>
+                </a>
+            </th>
         </tr>
         <?php foreach ($listacliente as $cliente) { ?>
             <tr>
@@ -46,6 +48,7 @@
                 <td><?php echo $cliente->getNome(); ?></td>
                 <td><?php echo $cliente->getCpf(); ?></td>
                 <td><?php echo $cliente->getNumero(); ?></td>
+                <td></td> </tr><!--lista vazia pra nao bugar visualmente
             </tr>
         <?php } ?>
     </table>

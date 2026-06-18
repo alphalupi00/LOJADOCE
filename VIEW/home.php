@@ -24,7 +24,7 @@
         <br>
         <!--div pra separar a imagem-->
         <div>
-            <img src="../IMAGENS/loja.png" width="800" alt="imagemloja" class="responsive-img">
+            <img src="../IMAGENS/loja.png" width="1000"  alt="imagemloja" class="responsive-img">
         </div>
         
 

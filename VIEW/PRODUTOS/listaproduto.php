@@ -31,11 +31,7 @@
 </head>
 <body class="#a1887f  brown lighten-4">
     <h1>Lista de Produtos</h1>
-    <!-- botao salvar -->
-        <a class="btn-floating btn-small waves-effect waves-light green">
-            <i class="material-icons"
-                onclick="javaScript:location.href='inserirproduto.php'">+</i>
-        </a>
+
 
     <table class="striped responsive-table hover: orange lighten-2">
         <tr>
@@ -45,6 +41,15 @@
             <th>Quantidade em Estoque</th>
             <th>Quantidade Mínima</th>
             <th>Quantidade Máxima</th>
+            <th>Cadastrar produto
+                            <!-- botao salvar -->
+                <a class="btn-floating btn-small waves-effect waves-light green">
+                <i class="material-icons"
+                    onclick="javaScript:location.href='inserirproduto.php'">+</i>
+                </a>
+            </th>
+
+            
         </tr>
         <?php foreach ($listaprodutos as $produto) { ?>
             <tr>
@@ -54,6 +59,7 @@
                 <td><?php echo $produto->getQtdestoque(); ?></td>
                 <td><?php echo $produto->getQtdminima(); ?></td>
                 <td><?php echo $produto->getQtdmaxima(); ?></td>
+                <td></td> </tr>
             </tr>
         <?php } ?>
     </table>

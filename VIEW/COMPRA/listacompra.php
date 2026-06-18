@@ -1,14 +1,13 @@
 <?php
 
     include_once $_SERVER['DOCUMENT_ROOT'] . "/LOJADOCE/VIEW/menu.php";
-    include_once $_SERVER['DOCUMENT_ROOT'] . "/LOJADOCE/DAL/fornecedor.php";
-    include_once $_SERVER['DOCUMENT_ROOT'] . "/LOJADOCE/MODEL/fornecedor.php";
+    include_once $_SERVER['DOCUMENT_ROOT'] . "/LOJADOCE/DAL/compra.php";
+    include_once $_SERVER['DOCUMENT_ROOT'] . "/LOJADOCE/MODEL/compra.php";
 
+    use DAL\compra;
 
-    use DAL\fornecedor;
-
-    $dalFornecedor = new Fornecedor();
-    $listafornecedor = $dalFornecedor->Select();
+    $dalCompra = new Compra();
+    $listacompras = $dalCompra->Select();
 ?>
 
 <!DOCTYPE html>
@@ -22,35 +21,35 @@
 
     <!-- para usar icones na pagina -->
      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-            
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fornecedores</title>
+    <title>Compras</title>
 </head>
 <body class="#a1887f  brown lighten-4">
-    <h1>Lista de Fornecedores</h1>
+    <h1>Lista de Compras</h1>
 
     <table class = "striped responsive-table hover: orange lighten-2">
         <tr>
-            <th>ID</th>
-            <th>Descrição</th>
-            <th>CNPJ</th>
-            <th>Cadastrar fornecedor
+            <th>ID Compra</th>
+            <th>Funcionario responsável</th>
+            <th>Data da compra</th>
+            <th>Total</th>
+            <th>Cadastrar compra
                             <!-- botao salvar -->
                 <a class="btn-floating btn-small waves-effect waves-light green">
                 <i class="material-icons"
-                    onclick="javaScript:location.href='inserirfornecedor.php'">+</i>
+                    onclick="javaScript:location.href='inserircompra.php'">+</i>
                 </a>
             </th>
-
         </tr>
-        <?php foreach ($listafornecedor as $fornecedor) { ?>
+        <?php foreach ($listacompras as $compra) { ?>
             <tr>
-                <td><?php echo $fornecedor->getIdfornecedor(); ?></td>
-                <td><?php echo $fornecedor->getDescricao(); ?></td>
-                <td><?php echo $fornecedor->getCnpj(); ?></td>
-                <td></td> </tr>
+                <td><?php echo $compra->getIdcompra(); ?></td>
+                <td><?php echo $compra->getIdfuncionario(); ?></td>
+                <td><?php echo $compra->getdatacompra(); ?></td>
+                <td><?php echo $compra->getTotal(); ?></td>
+
             </tr>
         <?php } ?>
     </table>

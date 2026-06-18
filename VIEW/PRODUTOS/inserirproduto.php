@@ -24,6 +24,7 @@
         </div>
 
         <div class = "row brown lighten-1">
+            
             <form action="operacaoinserirproduto.php" method="post" class="col s10">
 
                 <div class="input-field col s8">
@@ -52,15 +53,13 @@
                 </div>
 
                 <!-- botao enviar -->
-                <div class="row center col s8">
-                    <button class="btn waves-effect waves-light" type="submit" name="action" >
-                    Salvar
-                    </button>
-                  
-                    
-
+                <div class="row">
+                    <div class="col s12 m10 center-align" style="margin-top: 15px;">
+                        <button class="btn waves-effect waves-light green" type="submit" name="action">
+                            Salvar
+                        </button>
+                    </div>
                 </div>
-
             </form>    
         </div>
     </div>

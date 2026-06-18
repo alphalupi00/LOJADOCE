@@ -31,14 +31,14 @@
 </head>
 
 <body class="#a1887f  brown lighten-4">
-    <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">cake</i></a>
-
     <nav>
         <div class="nav-wrapper brown lighten1">
-            <a href="https://materializecss.com/icons.html"  class="brand-logo right">
-                <img src="/LOJADOCE/IMAGENS/logo.png" height="63" width="180" class="materialboxes">
+                <a href="#" data-target="slide-out" class="sidenav-trigger right show-on-large" style="margin-right: 15px;"><i class="material-icons">cake</i></a>
+            <a class="brand-logo left" style="margin-left: 20px;">
+                <img src="/LOJADOCE/IMAGENS/logo.png"  height="63" width="180" class="materialboxes">
             </a>
-            <ul id="nav-mobile" class="left hide-on-med-and-down">
+
+            <ul id="nav-mobile" class="left hide-on-med-and-down" style="margin-left: 210px;">
                 <li><a href="/LOJADOCE/VIEW/home.php">Home</a></li>
                 <li><a href="/LOJADOCE/VIEW/PRODUTOS/listaproduto.php">Produtos</a></li>
                 <li><a href="/LOJADOCE/VIEW/CLIENTE/listacliente.php">Clientes</a></li>
@@ -59,8 +59,10 @@
                         <a href="#email"><span class="white-text email">lojadoce@example.com</span></a>
                     </div>
                 </li>
-                <li><a href="/LOJADOCE/VIEW/home.php" class="white-text">HOME</a></li>
-                <li><a href="/LOJADOCE/VIEW/FUNCIONARIO/listafuncionario.php" ><i class="material-icons white-text">people</i>Perfil (Funcionário)</a></li>
+                <li><a href="/LOJADOCE/VIEW/home.php">HOME</a></li>
+                <li><a href="/LOJADOCE/VIEW/FUNCIONARIO/listafuncionario.php" ><i class="material-icons">people</i>Perfil (Funcionário)</a></li>
+                <li><a href="/LOJADOCE/VIEW/VENDA/listavenda.php" ><i class="material-icons">attach_money</i>Cadastrar Venda</a></li>
+                <li><a href="/LOJADOCE/VIEW/COMPRA/listacompra.php" ><i class="material-icons">shopping_cart</i>Cadastrar Compra</a></li>
 
                 <li>
                     <div class="divider"></div>
