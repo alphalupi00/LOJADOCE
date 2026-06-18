@@ -54,7 +54,7 @@
                         <div class="background white-text ">
                             <img src="/LOJADOCE/IMAGENS/logo.png" width="180" height="70" class="materialboxed">
                         </div>
-                        <a href="https:www.fema.edu.br"><img src="/LOJADOCE/IMAGENS/logo.png" width="250" height="80"></a>
+                        <a><img src="/LOJADOCE/IMAGENS/logo.png" width="250" height="80"></a>
                         <a href="#name"><span class="white-text name">Loja Doce</span></a>
                         <a href="#email"><span class="white-text email">lojadoce@example.com</span></a>
                     </div>
