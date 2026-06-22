@@ -7,8 +7,8 @@ $(document).ready(function() {
             idfuncionario: {
                 required: "Busque e selecione o funcionário responsável."
             },
-            datacompra: {
-                required: "A data da compra é obrigatória."
+            datavenda: {
+                required: "A data da venda é obrigatória."
             }
         }
     });

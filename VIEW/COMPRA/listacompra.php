@@ -27,7 +27,7 @@
     <title>Compras</title>
 </head>
 <body class="#a1887f  brown lighten-4">
-    <h1>Lista de Compras</h1>
+    <h1>Compras Cadastradas</h1>
 
     <table class = "striped responsive-table hover: orange lighten-2">
         <tr>
@@ -48,7 +48,8 @@
                 <td><?php echo $compra->getIdcompra(); ?></td>
                 <td><?php echo $compra->getIdfuncionario(); ?></td>
                 <td><?php echo $compra->getdatacompra(); ?></td>
-                <td><?php echo $compra->getTotal(); ?></td>
+                <td><?php echo 'R$ ' . number_format($compra->getTotal(), 2, ',', '.'); ?></td>
+                
 
             </tr>
         <?php } ?>

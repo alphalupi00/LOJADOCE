@@ -28,7 +28,7 @@
     <title>Vendas</title>
 </head>
 <body class="#a1887f  brown lighten-4">
-    <h1>Lista de Vendas</h1>
+    <h1>Vendas Cadastradas</h1>
 
     <table class="striped responsive-table hover: orange lighten-2">
         <tr>
@@ -51,7 +51,7 @@
                 <td><?php echo $venda->getIdcliente(); ?></td>
                 <td><?php echo $venda->getIdfuncionario(); ?></td>
                 <td><?php echo $venda->getDatavenda(); ?></td>
-                <td><?php echo $venda->getTotal(); ?></td>
+                <td><?php echo 'R$ ' . number_format($venda->getTotal(), 2, ',', '.'); ?></td>
             </tr>
         <?php } ?>
     </table>

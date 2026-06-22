@@ -41,33 +41,29 @@
             <th>Quantidade em Estoque</th>
             <th>Quantidade Mínima</th>
             <th>Quantidade Máxima</th>
-            <th>Cadastrar produto
-                            <!-- botao salvar -->
-                <a class="btn-floating btn-small waves-effect waves-light green">
+            <th>Cadastrar novo poduto                            
+                <!-- botao SALVAR -->
+                <a class="btn-floating btn-small waves-effect waves- #66bb6a green lighten-1">
                 <i class="material-icons"
                     onclick="javaScript:location.href='inserirproduto.php'">+</i>
-                </a>
-            </th>
-            <th>Operações</th>
-
-            
+                </a></th>
         </tr>
-        <?php foreach ($listaprodutos as $produto) { ?>
+            <?php foreach ($listaprodutos as $produto) { ?>
             <tr>
                 <td><?php echo $produto->getIdProduto(); ?></td>
                 <td><?php echo $produto->getDescricao(); ?></td>
-                <td><?php echo $produto->getPreco(); ?></td>
+                <td><?php echo 'R$ ' . number_format($produto->getPreco(), 2, ',', '.'); ?></td>
                 <td><?php echo $produto->getQtdestoque(); ?></td>
                 <td><?php echo $produto->getQtdminima(); ?></td>
                 <td><?php echo $produto->getQtdmaxima(); ?></td>
-                <td></td> 
-                <td><a class="btn-floating btn-smal waves-effect pink">
-                    <i class="material-icons"
-                    onclick="JavaScript:location.href='editarproduto.php?idproduto='+'<?php echo $produto->getIdProduto(); ?>'">edit
-                    </i>
+
+                <!-- botao EDITAR -->
+                <td><a class="btn-floating btn-smal waves-effect #ff9100 orange accent-3">
+                        <i class="material-icons"
+                        onclick="JavaScript:location.href='editarproduto.php?idproduto='+'<?php echo $produto->getIdProduto(); ?>'">edit
+                        </i>
                     </a>
-                </td></tr>
-            </tr>
+        </tr>
         <?php } ?>
     </table>
 </body>

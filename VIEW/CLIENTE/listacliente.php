@@ -48,7 +48,7 @@
                 <td><?php echo $cliente->getNome(); ?></td>
                 <td><?php echo $cliente->getCpf(); ?></td>
                 <td><?php echo $cliente->getNumero(); ?></td>
-                <td></td> </tr><!--lista vazia pra nao bugar visualmente
+                <td></td> </tr>
             </tr>
         <?php } ?>
     </table>
