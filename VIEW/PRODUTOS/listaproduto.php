@@ -7,7 +7,7 @@
 
     use DAL\Produto;
 
-    $dalProduto = new Produto();
+    $dalProduto = new DAL\Produto();
     $listaprodutos = $dalProduto->Select();
 
 ?>
@@ -48,18 +48,25 @@
                     onclick="javaScript:location.href='inserirproduto.php'">+</i>
                 </a>
             </th>
+            <th>Operações</th>
 
             
         </tr>
         <?php foreach ($listaprodutos as $produto) { ?>
             <tr>
-                <td><?php echo $produto->getIdproduto(); ?></td>
+                <td><?php echo $produto->getIdProduto(); ?></td>
                 <td><?php echo $produto->getDescricao(); ?></td>
                 <td><?php echo $produto->getPreco(); ?></td>
                 <td><?php echo $produto->getQtdestoque(); ?></td>
                 <td><?php echo $produto->getQtdminima(); ?></td>
                 <td><?php echo $produto->getQtdmaxima(); ?></td>
-                <td></td> </tr>
+                <td></td> 
+                <td><a class="btn-floating btn-smal waves-effect pink">
+                    <i class="material-icons"
+                    onclick="JavaScript:location.href='editarproduto.php?idproduto='+'<?php echo $produto->getIdProduto(); ?>'">edit
+                    </i>
+                    </a>
+                </td></tr>
             </tr>
         <?php } ?>
     </table>
