@@ -27,11 +27,7 @@
     <title>Compras</title>
 </head>
 <body class="#a1887f  brown lighten-4">
-<<<<<<< HEAD
-    <h1>Lista de Compras</h1>
-=======
     <h1>Compras Cadastradas</h1>
->>>>>>> c3fd0ba8e7c3018ef2cef8982bfe4d2672721959
 
     <table class = "striped responsive-table hover: orange lighten-2">
         <tr>
@@ -39,7 +35,7 @@
             <th>Funcionario responsável</th>
             <th>Data da compra</th>
             <th>Total</th>
-            <th>Cadastrar compra
+            <th>Cadastrar Compra
                             <!-- botao salvar -->
                 <a class="btn-floating btn-small waves-effect waves-light green">
                 <i class="material-icons"
@@ -52,12 +48,8 @@
                 <td><?php echo $compra->getIdcompra(); ?></td>
                 <td><?php echo $compra->getIdfuncionario(); ?></td>
                 <td><?php echo $compra->getdatacompra(); ?></td>
-<<<<<<< HEAD
-                <td><?php echo $compra->getTotal(); ?></td>
-=======
                 <td><?php echo 'R$ ' . number_format($compra->getTotal(), 2, ',', '.'); ?></td>
                 
->>>>>>> c3fd0ba8e7c3018ef2cef8982bfe4d2672721959
 
             </tr>
         <?php } ?>

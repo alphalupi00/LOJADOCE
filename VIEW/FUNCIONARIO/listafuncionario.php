@@ -13,14 +13,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-     <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
-    <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-    <!-- para usar icones na pagina -->
-     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
             
 
     <meta charset="UTF-8">
@@ -36,9 +33,8 @@
             <th>Nome</th>
             <th>Telefone</th>
             <th>Email</th>
-            <th>Cadastrar funcionário
-                <!-- botao salvar -->
-                 <a class="btn-floating btn-small waves-effect waves-light green">
+            <th>Cadastrar funcionário 
+                <a class="btn-floating btn-small waves-effect waves-light green">
                     <i class="material-icons" onclick="javaScript:location.href='inserirfuncionario.php'">+</i>
                 </a>
             </th>
@@ -49,9 +45,34 @@
                 <td><?php echo $funcionario->getNome(); ?></td>
                 <td><?php echo $funcionario->getNumero(); ?></td>
                 <td><?php echo $funcionario->getEmail(); ?></td>
-                <td></td> </tr>
+                <td>
+                    <a class="btn-floating btn-smal waves-effect pink">
+                        <i class="material-icons"
+                        onclick="JavaScript:location.href='editarfuncionario.php?idfuncionario='+'<?php echo $funcionario->getIdfuncionario(); ?>'">edit
+                        </i>
+                    </a>
+
+                    <a class="btn-floating btn-smal waves-effect blue">
+                        <i class="material-icons"
+                        onclick="JavaScript:location.href='detalhefuncionario.php?idfuncionario='+'<?php echo $funcionario->getIdfuncionario(); ?>'">details
+                        </i>
+                    </a>
+
+                    <a class="btn-floating btn-smal waves-effect red">
+                        <i class="material-icons"
+                        onclick="JavaScript: remover(<?php echo $funcionario->getIdfuncionario(); ?>)">delete</i>
+                    </a>
+                </td>
             </tr>
         <?php } ?>
     </table>
 </body>
 </html>
+
+<script>
+    function remover(idfuncionario) {
+        if (confirm('Excluir Funcionário ' + idfuncionario + '?')){
+            location.href = 'removerfuncionario.php?idfuncionario=' + idfuncionario;
+        }
+    }
+</script>
