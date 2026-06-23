@@ -18,11 +18,28 @@
                 $fornecedor->setDescricao($linha['descricao']);
                 $fornecedor->setCnpj($linha['cnpj']);
 
-
                 $listafornecedor[]= $fornecedor;
             }
 
             return $listafornecedor;
+        }
+
+        public function SelectById(int $idfornecedor){
+            $sql = "Select * from fornecedor where idfornecedor=?;";
+            $con = Conexao::conectar();
+            $query = $con->prepare($sql);
+            $query->execute(array($idfornecedor));
+            $linha = $query->fetch(\PDO::FETCH_ASSOC);
+            $con = Conexao::desconectar();
+
+            $fornecedor = new \MODEL\fornecedor();
+            if ($linha) {
+                $fornecedor->setIdfornecedor($linha['idfornecedor']);
+                $fornecedor->setDescricao($linha['descricao']);
+                $fornecedor->setCnpj($linha['cnpj']);
+            }
+
+            return $fornecedor;
         }
 
         public function Insert(\MODEL\Fornecedor $fornecedor)
@@ -37,7 +54,30 @@
             echo $result->errorCode();
             
             return $result;
+        }
 
+        public function Update(\MODEL\Fornecedor $fornecedor)
+        {
+            $sql = "UPDATE fornecedor SET descricao = ?, cnpj = ? WHERE idfornecedor = ?;"; 
+            
+            $con = Conexao::conectar();
+            $query = $con->prepare($sql); 
+            $result = $query->execute(array($fornecedor->getDescricao(), $fornecedor->getCnpj(), $fornecedor->getIdfornecedor()));
+            $con = Conexao::desconectar();
+            
+            return $result;
+        }
+
+        public function Delete(int $idfornecedor)
+        {
+            $sql = "Delete from fornecedor WHERE idfornecedor = ?;";
+
+            $con = Conexao::conectar();
+            $query = $con->prepare($sql); 
+            $result = $query->execute(array($idfornecedor));
+            $con = Conexao::desconectar();
+            
+            return $result;
         }
     }
 ?>

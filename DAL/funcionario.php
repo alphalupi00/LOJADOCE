@@ -25,6 +25,26 @@
 
             return $listafuncionario;
         }
+
+        public function SelectById(int $idfuncionario){
+            $sql = "Select * from funcionario where idfuncionario=?;";
+            $con = Conexao::conectar();
+            $query = $con->prepare($sql);
+            $query->execute(array($idfuncionario));
+            $linha = $query->fetch(\PDO::FETCH_ASSOC);
+            $con = Conexao::desconectar();
+
+            $funcionario = new \MODEL\funcionario();
+            if ($linha) {
+                $funcionario->setIdfuncionario($linha['idfuncionario']);
+                $funcionario->setNome($linha['nome']);
+                $funcionario->setNumero($linha['numero']);
+                $funcionario->setEmail($linha['email']);
+                $funcionario->setSenha($linha['senha']);
+            }
+
+            return $funcionario;
+        }
         
         public function Insert(\MODEL\Funcionario $funcionario)
         {
@@ -38,7 +58,30 @@
             echo $result->errorCode();
             
             return $result;
+        }
 
+        public function Update(\MODEL\Funcionario $funcionario)
+        {
+            $sql = "UPDATE funcionario SET nome = ?, numero = ?, email = ?, senha = ? WHERE idfuncionario = ?;"; 
+            
+            $con = Conexao::conectar();
+            $query = $con->prepare($sql); 
+            $result = $query->execute(array($funcionario->getNome(), $funcionario->getNumero(), $funcionario->getEmail(), $funcionario->getSenha(), $funcionario->getIdfuncionario()));
+            $con = Conexao::desconectar();
+            
+            return $result;
+        }
+
+        public function Delete(int $idfuncionario)
+        {
+            $sql = "Delete from funcionario WHERE idfuncionario = ?;";
+
+            $con = Conexao::conectar();
+            $query = $con->prepare($sql); 
+            $result = $query->execute(array($idfuncionario));
+            $con = Conexao::desconectar();
+            
+            return $result;
         }
     }
 ?>

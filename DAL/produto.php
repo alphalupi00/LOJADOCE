@@ -73,7 +73,6 @@
             return $result;
 
         }
-<<<<<<< HEAD
 
         public function Delete(int $idproduto)
         {
@@ -87,7 +86,5 @@
             return $result;
 
         }
-=======
->>>>>>> c3fd0ba8e7c3018ef2cef8982bfe4d2672721959
     }
 ?>
