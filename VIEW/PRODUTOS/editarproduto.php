@@ -83,7 +83,6 @@
 
                 <!-- botao enviar -->
                 <div class="row">
-<<<<<<< HEAD
                     <div class="col s12 m10 center-align" style="margin-top: 15px;">                 
                         <a class="waves-effect waves-light Purple btn"
                         onclick="JavaScript:location.href='listaproduto.php'">
@@ -93,12 +92,6 @@
                             Salvar
                              <i class="material-icons right">send</i>
                         </button>        
-=======
-                    <div class="col s12 m10 center-align" style="margin-top: 15px;">
-                        <button class="btn waves-effect waves-light green" type="submit" name="action">
-                            Salvar
-                        </button>
->>>>>>> c3fd0ba8e7c3018ef2cef8982bfe4d2672721959
                     </div>
                 </div>
             </form>    

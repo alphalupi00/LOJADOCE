@@ -7,16 +7,6 @@
 <html lang="pt-br">
 <head>
 
-<<<<<<< HEAD
-     <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-=======
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -38,7 +28,6 @@
             position: relative !important;
         }
     </style>
->>>>>>> c3fd0ba8e7c3018ef2cef8982bfe4d2672721959
     <title>Inserir produtos</title>
 </head>
 <body class = "#a1887f  brown lighten-4">
@@ -48,26 +37,15 @@
         </div>
 
         <div class = "row brown lighten-1">
-<<<<<<< HEAD
-            <form action="operacaoinserirfornecedor.php" method="post" class="col s10">
-
-                <div class="input-field col s8">
-                    <input placeholder="Informe o nome do fornecedor" id="descricao" name="descricao" type="text" class="validate">
-=======
             <form id="formFornecedor" action="operacaoinserirfornecedor.php" method="post" class="col s10" novalidate>
 
                 <div class="input-field col s8">
                     <input placeholder="Informe o nome do fornecedor" id="descricao" name="descricao" type="text" class="validate" required minlength="2" maxlength="40">
->>>>>>> c3fd0ba8e7c3018ef2cef8982bfe4d2672721959
                     <label for="descricaolabel">Nome do fornecedor: </label>
                 </div>
 
                 <div class="input-field col s8">
-<<<<<<< HEAD
-                    <input placeholder="Informe o CNPJ do fornecedor" id="cnpj" name="cnpj" type="text" class="validate">
-=======
                     <input placeholder="Informe o CNPJ do fornecedor" id="cnpj" name="cnpj" type="text" class="validate" required minlength="14">
->>>>>>> c3fd0ba8e7c3018ef2cef8982bfe4d2672721959
                     <label for="cnpjlabel">CNPJ: </label>
                 </div>
 
@@ -84,9 +62,6 @@
             </form>    
         </div>
     </div>
-<<<<<<< HEAD
-=======
     <script src="/LOJADOCE/VIEW/JS/validacaofornecedor.js"></script>
->>>>>>> c3fd0ba8e7c3018ef2cef8982bfe4d2672721959
 </body>
 </html>

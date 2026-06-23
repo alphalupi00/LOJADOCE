@@ -48,11 +48,7 @@
                 <td><?php echo $cliente->getNome(); ?></td>
                 <td><?php echo $cliente->getCpf(); ?></td>
                 <td><?php echo $cliente->getNumero(); ?></td>
-<<<<<<< HEAD
-                <td></td> </tr><!--lista vazia pra nao bugar visualmente
-=======
                 <td></td> </tr>
->>>>>>> c3fd0ba8e7c3018ef2cef8982bfe4d2672721959
             </tr>
         <?php } ?>
     </table>
