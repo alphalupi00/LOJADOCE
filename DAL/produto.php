@@ -73,5 +73,21 @@
             return $result;
 
         }
+<<<<<<< HEAD
+
+        public function Delete(int $idproduto)
+        {
+            $sql = "Delete from produto WHERE idproduto = ?;";
+
+            $con = Conexao::conectar();
+            $query = $con->prepare($sql); 
+            $result = $query->execute(array($idproduto));
+            $con = Conexao::desconectar();
+            
+            return $result;
+
+        }
+=======
+>>>>>>> c3fd0ba8e7c3018ef2cef8982bfe4d2672721959
     }
 ?>

@@ -41,6 +41,57 @@
             <th>Quantidade em Estoque</th>
             <th>Quantidade Mínima</th>
             <th>Quantidade Máxima</th>
+<<<<<<< HEAD
+            <th>Cadastrar produto
+                            <!-- botao salvar -->
+                <a class="btn-floating btn-small waves-effect waves-light green">
+                <i class="material-icons"
+                    onclick="javaScript:location.href='inserirproduto.php'">+</i>
+                </a>
+            </th>
+            <th>Operações</th>
+
+            
+        </tr>
+        <?php foreach ($listaprodutos as $produto) { ?>
+            <tr>
+                <td><?php echo $produto->getIdProduto(); ?></td>
+                <td><?php echo $produto->getDescricao(); ?></td>
+                <td><?php echo $produto->getPreco(); ?></td>
+                <td><?php echo $produto->getQtdestoque(); ?></td>
+                <td><?php echo $produto->getQtdminima(); ?></td>
+                <td><?php echo $produto->getQtdmaxima(); ?></td>
+                <td></td> 
+                <td><a class="btn-floating btn-smal waves-effect pink">
+                    <i class="material-icons"
+                    onclick="JavaScript:location.href='editarproduto.php?idproduto='+'<?php echo $produto->getIdProduto(); ?>'">edit
+                    </i>
+                    </a>
+
+                    <a class="btn-floating btn-smal waves-effect blue">
+                    <i class="material-icons"
+                    onclick="JavaScript:location.href='detalheproduto.php?idproduto='+'<?php echo $produto->getIdProduto(); ?>'">details
+                    </i>
+                    </a>
+                    <a class="btn-floating btn-smal waves-effect red">
+                    <i class="material-icons"
+                    onclick="JavaScript: remover(<?php echo $produto->getIdProduto(); ?>)">delete</i>
+                    </a>
+                </td></tr>
+            </tr>
+        <?php } ?>
+    </table>
+</body>
+</html>
+
+<script>
+    function remover(idproduto) {
+        if (confirm('Excluir Prouto' + idproduto + '?')){
+            location.href = 'removerproduto.php?idproduto=' + idproduto;
+        }
+    }
+</script>
+=======
             <th>Cadastrar novo poduto                            
                 <!-- botao SALVAR -->
                 <a class="btn-floating btn-small waves-effect waves- #66bb6a green lighten-1">
@@ -68,3 +119,4 @@
     </table>
 </body>
 </html>
+>>>>>>> c3fd0ba8e7c3018ef2cef8982bfe4d2672721959

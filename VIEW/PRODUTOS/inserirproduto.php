@@ -7,6 +7,16 @@
 <html lang="pt-br">
 <head>
 
+<<<<<<< HEAD
+     <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+=======
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -28,6 +38,7 @@
             position: relative !important;
         }
     </style>
+>>>>>>> c3fd0ba8e7c3018ef2cef8982bfe4d2672721959
     <title>Inserir produtos</title>
 </head>
 <body class = "#a1887f  brown lighten-4">
@@ -38,30 +49,54 @@
 
         <div class = "row brown lighten-1">
             
+<<<<<<< HEAD
+            <form action="operacaoinserirproduto.php" method="post" class="col s10">
+
+                <div class="input-field col s8">
+                    <input placeholder="Informe o nome do produto" id="descricao" name="descricao" type="text" class="validate">
+=======
             <form id="formProduto" action="operacaoinserirproduto.php" method="post" class="col s10" novalidate>
 
                 <div class="input-field col s8">
                     <input placeholder="Informe o nome do produto" id="descricao" name="descricao" type="text" class="validate" required minlength="2" maxlength="50">
+>>>>>>> c3fd0ba8e7c3018ef2cef8982bfe4d2672721959
                     <label for="nomelabel">Nome do produto: </label>
                 </div>
 
                 <div class="input-field col s8">
+<<<<<<< HEAD
+                    <input placeholder="Informe o preço do produto" id="preco" name="preco" step="0.01" type="number" class="validate">
+                    <label for="precolabel">Preço: </label>
+                </div>
+
+                 <div class="input-field col s8">
+                    <input placeholder="Informe a quantidade em estoque" id="qtdestoque" name="qtdestoque" type="number" step="0.01" class="validate">
+=======
                     <input placeholder="Informe o preço do produto" id="preco" name="preco" step="0.01" type="number" class="validate" required min="0.01">
                     <label for="precolabel">Preço R$: </label>
                 </div>
 
                 <div class="input-field col s8">
                     <input placeholder="Informe a quantidade em estoque" id="qtdestoque" name="qtdestoque" type="number" step="0.01" class="validate" required min="1">
+>>>>>>> c3fd0ba8e7c3018ef2cef8982bfe4d2672721959
                     <label for="quantidadelabel">Quantidade em estoque: </label>
                 </div>
 
                  <div class="input-field col s8">
+<<<<<<< HEAD
+                    <input placeholder="Informe a quantidade minima" id="qtdminima" name="qtdminima" type="number" step="0.01" class="validate">
+=======
                     <input placeholder="Informe a quantidade minima" id="qtdminima" name="qtdminima" type="number" step="0.01" class="validate" required min="1">
+>>>>>>> c3fd0ba8e7c3018ef2cef8982bfe4d2672721959
                     <label for="quantidadelabel">Quantidade minima: </label>
                 </div>
 
                 <div class="input-field col s8">
+<<<<<<< HEAD
+                    <input placeholder="Informe a quantidade maxima" id="qtdmaxima" name="qtdmaxima" type="number" step="0.01" class="validate">
+=======
                     <input placeholder="Informe a quantidade maxima" id="qtdmaxima" name="qtdmaxima" type="number" step="0.01" class="validate" required min="1">
+>>>>>>> c3fd0ba8e7c3018ef2cef8982bfe4d2672721959
                     <label for="quantidadelabel">Quantidade maxima: </label>
                 </div>
 
@@ -76,6 +111,9 @@
             </form>    
         </div>
     </div>
+<<<<<<< HEAD
+=======
     <script src="/LOJADOCE/VIEW/JS/validacaoproduto.js"></script>
+>>>>>>> c3fd0ba8e7c3018ef2cef8982bfe4d2672721959
 </body>
 </html>
